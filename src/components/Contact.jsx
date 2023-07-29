@@ -35,7 +35,7 @@ const Contact = () => {
       process.env.TEMPLATE,
       {
         from_name: form.name,
-        to_name: 'Adrian',
+        to_name: 'César',
         from_email: form.email,
         to_email: 'emilianolezama@outlook.com',
         message: form.message
