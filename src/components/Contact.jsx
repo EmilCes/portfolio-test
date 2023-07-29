@@ -26,9 +26,13 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    
+
+
+
     emailjs.send(
-      'service_a02xkxu',
-      'template_mdkjldp',
+      process.env.SERVICE,
+      process.env.TEMPLATE,
       {
         from_name: form.name,
         to_name: 'Adrian',
@@ -36,7 +40,7 @@ const Contact = () => {
         to_email: 'emilianolezama@outlook.com',
         message: form.message
       },
-      'BJz6o53FZl9bsj2CA'
+      process.env.API_KEY
     )
       .then(() => {
         setLoading(false);
